@@ -45,10 +45,19 @@ setInterval(function() {
 
     var hours = currentdate.getHours();
     var minutes = currentdate.getMinutes();
+    var seconds = currentdate.getSeconds();
+
+    var timeToCompare = document.getElementById(curDayOfWeek).value + ':00';
+
     hours = hours < 10 ? '0' + hours : hours;
     minutes = minutes < 10 ? '0' + minutes : minutes;
+    seconds = seconds < 10 ? '0' + seconds : seconds;
 
     var timeLabel = hours + ':' + minutes;
 
     document.getElementById('time').innerHTML = timeLabel;
+
+    if (timeLabel + ':' + seconds == timeToCompare) {
+        alert('Alarm on ' + curDayOfWeek + ' at ' + timeLabel + '!\nWake up!');
+    }
 }, 1000);
