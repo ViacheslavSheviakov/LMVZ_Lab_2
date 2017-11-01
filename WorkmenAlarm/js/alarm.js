@@ -9,11 +9,35 @@ var toDayOfWeek = function (day) {
 };
 
 var curDayOfWeek = toDayOfWeek(new Date().getDay());
+var vastAlarmSetType = 'all';
 
 $('.clockpicker').clockpicker({
     placement: 'bottom',
     align: 'right',
     donetext: 'Done'
+});
+
+$('#workdays').click(function(e){
+    vastAlarmSetType = 'workdays';
+});
+
+$('#all').click(function(e){
+    vastAlarmSetType = 'all';
+});
+
+$('#success').click(function() {
+    var vastTime = vast.value;
+
+    Mon.value = vastTime;
+    Tue.value = vastTime;
+    Wed.value = vastTime;
+    Thu.value = vastTime;
+    Fri.value = vastTime;
+
+    if (vastAlarmSetType == 'all') {
+        Sun.value = vastTime;
+        Sat.value = vastTime;
+    }
 });
 
 setInterval(function() {
