@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/standalone.css">
+    <link rel="stylesheet" href="css/clockpicker.css">
+    <title>Student Alarm</title>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">
+                    <span class="glyphicon glyphicon-hourglass"></span>
+                    Student Alarm
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+        <div class="col-md-8 bottom-line">
+            <span id="time" class="display-big">11:00</span>
+        </div>
+        <div class="col-md-4">
+            <table>
+                <tr>
+                    <td>Alarm Time:</td>
+                    <td>
+                        <div class="input-group clockpicker">
+                            <input type="text" id="alarm" class="form-control" value="08:00">
+                            <span class="input-group-addon">
+                                <span class="glyphicon glyphicon-time"></span>
+                            </span>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <button class="btn btn-lg btn-danger" style="display: none;" id="off">Off</button>
+                        <button class="btn btn-lg btn-success" id="on">On</button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/clockpicker.js"></script>
+    <script src="js/alarm.js"></script>
+</body>
+</html>

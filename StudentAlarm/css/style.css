@@ -1,0 +1,49 @@
+body {
+  transition: 1s;
+}
+
+table,
+tr,
+th,
+td {
+  border-collapse: collapse;
+}
+
+table {
+  font-size: 24px;
+  width: 100%;
+}
+
+tr td:first-child {
+  font-weight: bold;
+}
+
+tr {
+  border-bottom: 1px #eee solid;
+}
+
+tr:last-child {
+  border-bottom: none;
+}
+
+td {
+  padding: 10px 15px;
+}
+
+.display-big {
+  font-size: 144px;
+}
+
+@media only screen 
+and (min-device-width: 320px) 
+and (max-device-width: 600px) {
+  .display-big {
+    font-size: 48px;
+  }
+
+  .bottom-line {
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+    border-bottom: 1px #bbb solid;
+  }
+}
